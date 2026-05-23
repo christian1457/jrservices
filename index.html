@@ -1,0 +1,2504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jr Refrigeration</title>
+
+<!-- WEBSITE LOGO / FAVICON -->
+<link rel="icon" type="image/png" href="logo1.2.png">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    /* NAVIGATION */
+    nav{
+      width:100%;
+      position:fixed;
+      top:0;
+      left:0;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      background:rgb(12, 12, 12);
+      backdrop-filter:blur(8px);
+      z-index:1000;
+    }
+
+    nav h2{
+      color:white;
+      font-size:2rem;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#00bfff;
+    }
+
+    /* HERO SECTION */
+.hero{
+  min-height:100vh;
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  align-items:center;
+  gap:50px;
+  padding:130px 10% 80px;
+  background:#fffaf5;
+}
+
+/* LEFT SIDE */
+.hero-left{
+  animation:fadeLeft 1s ease;
+}
+
+.hero-tag{
+  display:inline-block;
+  padding:10px 22px;
+  background:#dff7f4;
+  color:#00a896;
+  border-radius:40px;
+  font-size:0.9rem;
+  font-weight:600;
+  margin-bottom:25px;
+}
+
+.hero-left h1{
+  font-size:4rem;
+  line-height:1.2;
+  color:#222;
+  margin-bottom:25px;
+  font-weight:700;
+}
+
+.hero-left p{
+  color:#666;
+  font-size:1.05rem;
+  line-height:1.9;
+  max-width:600px;
+  margin-bottom:35px;
+}
+
+/* BUTTONS */
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.hero-btn{
+  text-decoration:none;
+  padding:15px 35px;
+  border-radius:40px;
+  font-weight:600;
+  transition:0.3s;
+  display:inline-block;
+}
+
+/* PRIMARY */
+.primary-btn{
+  background:#00bfff;
+  color:white;
+}
+
+.primary-btn:hover{
+  background:#009acd;
+  transform:translateY(-4px);
+}
+
+/* SECONDARY */
+.secondary-btn{
+  border:2px solid #00bfff;
+  color:#00bfff;
+  background:white;
+}
+
+.secondary-btn:hover{
+  background:#00bfff;
+  color:white;
+  transform:translateY(-4px);
+}
+
+/* RIGHT SIDE */
+.hero-right{
+  display:flex;
+  justify-content:center;
+  animation:fadeRight 1s ease;
+}
+
+/* IMAGE BOX */
+.hero-image-box{
+  position:relative;
+  width:100%;
+  max-width:520px;
+}
+
+/* MAIN IMAGE */
+.main-hero-image{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:35px;
+  box-shadow:0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* SMALL FLOATING IMAGE */
+.small-hero-image{
+  position:absolute;
+  width:220px;
+  height:170px;
+  object-fit:cover;
+  border-radius:25px;
+  bottom:-35px;
+  left:-40px;
+  border:8px solid white;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ANIMATION */
+@keyframes fadeLeft{
+
+  from{
+    opacity:0;
+    transform:translateX(-50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+@keyframes fadeRight{
+
+  from{
+    opacity:0;
+    transform:translateX(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+/* MOBILE */
+@media(max-width:991px){
+
+  .hero{
+    padding-top:150px;
+    text-align:center;
+  }
+
+  .hero-left h1{
+    font-size:2.8rem;
+  }
+
+  .hero-left p{
+    margin:auto;
+    margin-bottom:35px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+  .hero-image-box{
+    max-width:420px;
+  }
+
+  .main-hero-image{
+    height:420px;
+  }
+
+  .small-hero-image{
+    width:170px;
+    height:130px;
+    left:0;
+    bottom:-20px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero-left h1{
+    font-size:2.2rem;
+  }
+
+  .main-hero-image{
+    height:320px;
+  }
+
+  .small-hero-image{
+    width:130px;
+    height:100px;
+  }
+
+}
+
+    section{
+      padding:90px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:2.7rem;
+      margin-bottom:10px;
+    }
+
+    .section-title p{
+      color:#666;
+    }
+
+   
+/* ABOUT SECTION */
+.about{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+  flex-wrap:wrap;
+  padding:80px 20px;
+}
+
+/* IMAGE AREA */
+.about-image{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CAROUSEL */
+.team-carousel{
+  position:relative;
+  width:380px;
+  height:450px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* IMAGE CARD */
+.team-card{
+  width:100%;
+  height:100%;
+  border-radius:25px;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* IMAGE */
+.team-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.5s ease;
+}
+
+/* EMPLOYEE NAME */
+.employee-name{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  padding:18px;
+  text-align:center;
+  font-size:1.2rem;
+  font-weight:600;
+  color:white;
+  background:linear-gradient(
+    transparent,
+    rgba(0,0,0,0.85)
+  );
+}
+
+/* BUTTONS */
+.carousel-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:45px;
+  height:45px;
+  border:none;
+  border-radius:50%;
+  background:#00bfff;
+  color:white;
+  font-size:1.5rem;
+  cursor:pointer;
+  z-index:5;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* BUTTON HOVER */
+.carousel-btn:hover{
+  background:#009acd;
+  transform:translateY(-50%) scale(1.1);
+}
+
+/* LEFT BUTTON */
+.left-btn{
+  left:-20px;
+}
+
+/* RIGHT BUTTON */
+.right-btn{
+  right:-20px;
+}
+
+/* ABOUT TEXT */
+.about-text{
+  max-width:550px;
+}
+
+.about-text h3{
+  font-size:2.3rem;
+  margin-bottom:20px;
+  color:#111;
+}
+
+.about-text p{
+  color:#666;
+  line-height:1.9;
+  margin-bottom:15px;
+}
+
+/* MISSION & VISION */
+.mission-vision{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  margin-top:50px;
+}
+
+/* CARD */
+.mv-card{
+  background:white;
+  padding:35px;
+  border-radius:25px;
+  max-width:500px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.mv-card:hover{
+  transform:translateY(-8px);
+}
+
+.mv-card h4{
+  font-size:1.8rem;
+  margin-bottom:20px;
+  color:#111;
+}
+
+.mv-card p{
+  color:#666;
+  line-height:1.9;
+}
+
+/* EMPLOYEE POSITION */
+.employee-position{
+  font-size:0.9rem;
+  font-weight:400;
+  color:#ddd;
+  letter-spacing:1px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .about{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .team-carousel{
+    width:300px;
+    height:360px;
+  }
+
+  .carousel-btn{
+    width:40px;
+    height:40px;
+  }
+
+}
+
+    /* SERVICES SECTION */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+/* SERVICE CARD */
+.service-card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.service-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+.service-card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+}
+
+.service-content{
+  padding:25px;
+}
+
+.service-content h3{
+  font-size:1.4rem;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.service-content p{
+  color:#666;
+  line-height:1.8;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.section-title h2{
+  font-size:2.8rem;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#666;
+  line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .section-title h2{
+    font-size:2rem;
+  }
+
+  .service-content h3{
+    font-size:1.2rem;
+  }
+
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+#products{
+  padding:90px 10%;
+  background:#f8f9fb;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:40px;
+}
+
+.section-title h2{
+  font-size:2.8rem;
+  color:#111;
+  margin-bottom:10px;
+}
+
+.section-title p{
+  color:#666;
+  font-size:1rem;
+  line-height:1.7;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.product-filter{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+  margin-bottom:40px;
+}
+
+.filter-btn{
+  padding:12px 25px;
+  border:none;
+  border-radius:40px;
+  background:#111;
+  color:white;
+  font-size:0.95rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.filter-btn:hover{
+  background:#00bfff;
+  transform:translateY(-3px);
+}
+
+.filter-btn.active{
+  background:#00bfff;
+}
+
+/* =========================
+   ADMIN PRODUCT FORM
+========================= */
+
+.admin-product-form{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom:40px;
+}
+
+.admin-product-form h3{
+  margin-bottom:20px;
+  font-size:1.8rem;
+  color:#111;
+}
+
+.admin-product-form input,
+.admin-product-form textarea,
+.admin-product-form select{
+  width:100%;
+  padding:15px;
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  outline:none;
+  font-size:1rem;
+}
+
+.admin-product-form input:focus,
+.admin-product-form textarea:focus,
+.admin-product-form select:focus{
+  border-color:#00bfff;
+  box-shadow:0 0 8px rgba(0,191,255,0.2);
+}
+
+/* SAVE BUTTON */
+.admin-product-form button{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:40px;
+  background:#111;
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.admin-product-form button:hover{
+  background:#00bfff;
+  transform:translateY(-3px);
+}
+
+/* =========================
+   PRODUCTS GRID
+========================= */
+
+.products-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+
+/* =========================
+   PRODUCT CARD
+========================= */
+
+.product-card{
+  background:white;
+  border-radius:25px;
+  overflow:hidden;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.4s;
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* IMAGE */
+.product-card img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+
+/* CONTENT */
+.product-content{
+  padding:25px;
+}
+
+.product-content h3{
+  font-size:1.4rem;
+  margin-bottom:12px;
+  color:#111;
+}
+
+.product-content p{
+  color:#666;
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+/* BADGES */
+.product-badge{
+  display:inline-block;
+  padding:7px 16px;
+  border-radius:30px;
+  font-size:0.85rem;
+  font-weight:600;
+  margin-bottom:15px;
+}
+
+.product-badge.new{
+  background:#d4f8d4;
+  color:#157515;
+}
+
+.product-badge.second{
+  background:#fff1cc;
+  color:#b77900;
+}
+
+/* =========================
+   ADMIN BUTTONS
+========================= */
+
+.product-buttons{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+}
+
+/* ALL BUTTONS */
+.edit-btn,
+.delete-btn,
+.update-btn,
+.save-btn{
+  flex:1;
+  border:none;
+  padding:12px;
+  border-radius:30px;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* EDIT */
+.edit-btn{
+  background:#111;
+}
+
+.edit-btn:hover{
+  background:#00bfff;
+  transform:translateY(-3px);
+}
+
+/* DELETE */
+.delete-btn{
+  background:#ff4d4d;
+}
+
+.delete-btn:hover{
+  background:#e60000;
+  transform:translateY(-3px);
+}
+
+/* UPDATE */
+.update-btn{
+  background:#28a745;
+}
+
+.update-btn:hover{
+  background:#1f7d35;
+  transform:translateY(-3px);
+}
+
+/* SAVE */
+.save-btn{
+  background:#333;
+}
+
+.save-btn:hover{
+  background:#111;
+  transform:translateY(-3px);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  #products{
+    padding:70px 5%;
+  }
+
+  .section-title h2{
+    font-size:2rem;
+  }
+
+  .product-card img{
+    height:200px;
+  }
+
+  .product-buttons{
+    flex-direction:column;
+  }
+
+}
+
+/* REVIEWS SECTION */
+.reviews-container{
+  width:100%;
+}
+
+.reviews-header{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.reviews-header h2{
+  font-size:2.8rem;
+  margin-bottom:10px;
+}
+
+.reviews-header p{
+  color:#666;
+}
+
+/* REVIEW GRID */
+.review-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+
+/* REVIEW CARD */
+.review-card{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.review-card h3{
+  margin-bottom:10px;
+}
+
+.stars{
+  color:gold;
+  font-size:1.2rem;
+  margin-bottom:15px;
+}
+
+.review-card p{
+  color:#555;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+/* BUTTONS */
+.review-buttons{
+  display:flex;
+  gap:10px;
+}
+
+.edit-btn,
+.delete-btn{
+  padding:10px 18px;
+  border:none;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.edit-btn{
+  background:#000000;
+}
+
+.delete-btn{
+  background:#ff4d4d;
+}
+
+.edit-btn:hover,
+.delete-btn:hover{
+  opacity:0.85;
+}
+
+/* REVIEW FORM */
+.review-form-container{
+  background:white;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.review-form-container h3{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+#reviewForm{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+#reviewForm input,
+#reviewForm select,
+#reviewForm textarea{
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  outline:none;
+  font-size:1rem;
+}
+
+#reviewForm input:focus,
+#reviewForm select:focus,
+#reviewForm textarea:focus{
+  border-color:#00bfff;
+}
+
+#reviewForm button{
+  padding:15px;
+  border:none;
+  border-radius:40px;
+  background:#111;
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+#reviewForm button:hover{
+  background:#00bfff;
+}
+
+   /* CONTACT SECTION */
+.contact-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+  align-items:stretch;
+  margin-top:50px;
+}
+
+/* CONTACT INFO */
+.contact-info{
+  background:white;
+  border-radius:30px;
+  padding:35px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* OWNER PROFILE */
+.owner-profile{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* IMAGE CONTAINER */
+.owner-image{
+  width:100%;
+  max-width:350px;
+  height:350px;
+  overflow:hidden;
+  border-radius:25px;
+  margin-bottom:30px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.owner-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* DETAILS */
+.owner-details h3{
+  font-size:2rem;
+  margin-bottom:20px;
+  color:#111;
+}
+
+.owner-details p{
+  color:#666;
+  line-height:1.9;
+  margin-bottom:15px;
+  font-size:1rem;
+}
+
+.owner-details a{
+  color:#00bfff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.owner-details a:hover{
+  text-decoration:underline;
+}
+
+/* CONTACT FORM */
+.contact-form{
+  background:white;
+  padding:40px;
+  border-radius:30px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.contact-form h3{
+  font-size:2rem;
+  margin-bottom:10px;
+  color:#111;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:18px;
+  border:1px solid #ddd;
+  border-radius:15px;
+  font-size:1rem;
+  outline:none;
+  transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#000000;
+  box-shadow:0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTON */
+.contact-form button{
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:#000000;
+  color:white;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.contact-form button:hover{
+  background:#009acd;
+  transform:translateY(-3px);
+}
+
+/* FOOTER */
+.footer{
+  background:#111;
+  color:white;
+  padding:50px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:40px;
+  margin-top:80px;
+}
+
+/* LEFT SIDE */
+.footer-left{
+  flex:1;
+  min-width:280px;
+}
+
+.footer-left h3{
+  font-size:1.8rem;
+  margin-bottom:15px;
+  color:#fff;
+}
+
+.footer-left p{
+  color:#bbb;
+  line-height:1.9;
+  font-size:1rem;
+  max-width:400px;
+}
+
+/* RIGHT SIDE */
+.footer-right{
+  flex:1;
+  min-width:280px;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:18px;
+}
+
+/* LINKS */
+.footer-right a{
+  color:white;
+  text-decoration:none;
+  font-size:0.95rem;
+  padding:10px 16px;
+  border-radius:30px;
+  transition:0.3s;
+  background:rgba(255,255,255,0.05);
+}
+
+/* HOVER */
+.footer-right a:hover{
+  background:#00bfff;
+  color:white;
+  transform:translateY(-3px);
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom{
+  width:100%;
+  text-align:center;
+  margin-top:35px;
+  padding-top:25px;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom p{
+  color:#aaa;
+  font-size:0.95rem;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .footer{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+  }
+
+  .footer-left p{
+    margin:auto;
+  }
+
+  .footer-right{
+    justify-content:center;
+  }
+
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>Jr Refrigeration</h2>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+<header id="home" class="hero">
+
+  <!-- LEFT SIDE -->
+  <div class="hero-left">
+
+    <span class="hero-tag">
+      Jr Refrigeration and Airconditioning Services
+    </span>
+
+    <h1>
+      Find The Perfect
+      Cooling Solution
+    </h1>
+
+    <p>
+      Professional Jr Refrigerator and Airconditioning
+      services in Cagayan de Oro City. We provide reliable installation, maintenance,
+      cleaning, and appliance solutions for homes
+      and businesses.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#products" class="hero-btn primary-btn">
+  Explore Us</a>
+
+      <a
+        href="https://www.facebook.com/jennrementizo"
+        target="_blank"
+        class="hero-btn secondary-btn"
+      >
+        Facebook Page
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="hero-right">
+
+    <div class="hero-image-box">
+
+      <img
+        src="fam`.jpg"
+        alt="Airconditioning Service"
+        class="main-hero-image"
+      >
+
+      <img
+        src="owner.png"
+        alt="Refrigerator Repair"
+        class="small-hero-image"
+      >
+
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+
+  <!-- SECTION TITLE -->
+  <div class="section-title">
+
+    <h2>About Us</h2>
+
+    <p>
+      Trusted Cooling & Refrigeration Specialists
+      in Cagayan de Oro City
+    </p>
+
+  </div>
+
+  <!-- ABOUT CONTENT -->
+  <div class="about">
+
+    <!-- IMAGE SECTION -->
+    <div class="about-image">
+
+      <div class="team-carousel">
+
+        <!-- LEFT BUTTON -->
+        <button
+          class="carousel-btn left-btn"
+          onclick="prevSlide()"
+        >
+          &#10094;
+        </button>
+
+        <!-- IMAGE CARD -->
+        <div class="team-card active">
+
+          <!-- IMAGE -->
+          <img
+            id="carouselImage"
+            src="em1.jpg"
+            alt="JR Refrigeration Team"
+          >
+
+          <!-- EMPLOYEE NAME -->
+          <div
+            class="employee-name"
+            id="employeeName"
+          >
+            Employee Name
+          </div>
+
+        </div>
+
+        <!-- RIGHT BUTTON -->
+        <button
+          class="carousel-btn right-btn"
+          onclick="nextSlide()"
+        >
+          &#10095;
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- TEXT -->
+    <div class="about-text">
+
+      <h3>
+        Jr Refrigeration and Airconditioning Services
+      </h3>
+
+      <p>
+        Jr Refrigeration and Airconditioning Services
+        is committed to providing reliable, affordable,
+        and professional cooling solutions for homes,
+        offices, and businesses in Cagayan de Oro City.
+      </p>
+
+      <p>
+        We specialize in refrigerator repair,
+        airconditioning installation, preventive maintenance,
+        troubleshooting, cleaning, and cooling system services.
+        Our experienced technicians ensure fast response,
+        quality workmanship, and customer satisfaction.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- MISSION & VISION -->
+  <div class="mission-vision">
+
+    <!-- MISSION -->
+    <div class="mv-card">
+
+      <h4>Our Mission</h4>
+
+      <p>
+        To provide dependable, affordable,
+        and high-quality refrigeration and
+        airconditioning services while ensuring
+        customer satisfaction, professional workmanship,
+        and fast technical support.
+      </p>
+
+    </div>
+
+    <!-- VISION -->
+    <div class="mv-card">
+
+      <h4>Our Vision</h4>
+
+      <p>
+        To become one of the most trusted
+        refrigeration and airconditioning service
+        providers in Northern Mindanao by delivering
+        reliable, innovative, and customer-focused solutions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+  // TEAM MEMBERS
+  const teamMembers = [
+
+    {
+      image:"owner.png",
+      name:"Jennfer Rementizo",
+      position:"OWNER"
+    },
+
+    {
+      image:"em1.jpg",
+      name:"Akhira Rementizo",
+      position:"TECHNICIAN"
+    },
+
+    {
+      image:"em2.jpg",
+      name:"Wayne Rementizo",
+      position:"TECHNICIAN"
+    },
+
+    {
+      image:"em3.jpg",
+      name:"Edmundo Tamse Alegue",
+      position:"TECHNICIAN"
+    },
+
+    {
+      image:"em4.jpg",
+      name:"Clark Rementizo ",
+      position:"TECHNICIAN"
+    }, 
+
+  ];
+
+  // CURRENT INDEX
+  let currentImage = 0;
+
+  // ELEMENTS
+  const carouselImage =
+    document.getElementById("carouselImage");
+
+  const employeeName =
+    document.getElementById("employeeName");
+
+  // UPDATE SLIDER
+  function updateSlider(){
+
+    carouselImage.src =
+      teamMembers[currentImage].image;
+
+    employeeName.innerHTML = `
+  ${teamMembers[currentImage].name}
+  <br>
+  <span class="employee-position">
+    ${teamMembers[currentImage].position}
+  </span>
+`;
+
+  }
+
+  // NEXT
+  function nextSlide(){
+
+    currentImage++;
+
+    if(currentImage >= teamMembers.length){
+
+      currentImage = 0;
+
+    }
+
+    updateSlider();
+
+  }
+
+  // PREVIOUS
+  function prevSlide(){
+
+    currentImage--;
+
+    if(currentImage < 0){
+
+      currentImage =
+        teamMembers.length - 1;
+
+    }
+
+    updateSlider();
+
+  }
+
+  // AUTO SLIDE
+  setInterval(function(){
+
+    nextSlide();
+
+  }, 4000);
+
+  // INITIAL LOAD
+  updateSlider();
+
+</script>
+
+
+  <!-- SERVICES -->
+<section id="services">
+
+  <div class="section-title">
+    <h2>Our Services</h2>
+    <p>
+      Reliable Refrigeration & Airconditioning Solutions
+      for Homes and Businesses
+    </p>
+  </div>
+
+  <div class="services">
+
+    <!-- SERVICE 1 -->
+    <div class="service-card">
+
+      <img src="Refrigerator Repair.png" alt="Refrigerator Repair">
+
+      <div class="service-content">
+        <h3>Refrigerator Repair</h3>
+
+        <p>
+          Fast and efficient repair services for all refrigerator brands.
+          We fix cooling problems, leaks, and compressor issues.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="service-card">
+
+      <img src="Airconditioning Services .png" alt="Airconditioning Services">
+
+      <div class="service-content">
+        <h3>Airconditioning Services</h3>
+
+        <p>
+          Professional cleaning, installation, maintenance,
+          and repair for residential and commercial airconditioners.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="service-card">
+
+      <img src="cleaning (2).png" alt="Aircon Cleaning">
+
+      <div class="service-content">
+        <h3>Aircon Cleaning</h3>
+
+        <p>
+          Deep cleaning services that improve cooling performance,
+          remove dirt buildup, and extend unit lifespan.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 4 -->
+    <div class="service-card">
+
+      <img src="Installation Services.png" alt="Installation Services">
+
+      <div class="service-content">
+        <h3>Installation / Assembly Services </h3>
+
+<p>
+  Safe and professional installation and assembly
+  services for refrigerators, freezers, and
+  airconditioning systems. We ensure proper setup,
+  secure connections, and reliable performance
+  for homes and businesses.
+</p>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 5 -->
+    <div class="service-card">
+
+      <img src="Preventive Maintenance.png" alt="Preventive Maintenance">
+
+      <div class="service-content">
+        <h3>Preventive Maintenance</h3>
+
+        <p>
+          Regular maintenance services to avoid costly repairs
+          and keep your appliances running efficiently.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- SERVICE 6 -->
+    <div class="service-card">
+
+      <img src="l2i4.jpg" alt="Customer Support">
+
+      <div class="service-content">
+        <h3>24/7 Customer Support</h3>
+
+        <p>
+          Friendly and responsive customer support ready
+          to assist your concerns anytime.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =========================
+     PRODUCTS SECTION
+========================= -->
+<section id="products">
+
+  <!-- TITLE -->
+  <div class="section-title">
+
+    <h2>Available Products</h2>
+
+    <p>
+      Brand New and Second Hand Refrigerators
+      & Airconditioning Units
+    </p>
+
+  </div>
+
+  <!-- FILTER BUTTONS -->
+  <div class="product-filter">
+
+    <button
+      class="filter-btn active"
+      onclick="filterProducts('all', event)"
+    >
+      All Products
+    </button>
+
+    <button
+      class="filter-btn"
+      onclick="filterProducts('brand-new', event)"
+    >
+      Brand New
+    </button>
+
+    <button
+      class="filter-btn"
+      onclick="filterProducts('second-hand', event)"
+    >
+      Second Hand
+    </button>
+
+  </div>
+
+  <!-- ADMIN PRODUCT FORM -->
+  <div
+    class="admin-product-form"
+    id="adminProductForm"
+    style="display:none;"
+  >
+
+    <h3>Admin Product Panel</h3>
+
+    <input
+      type="text"
+      id="productName"
+      placeholder="Product Name"
+    >
+
+    <input
+      type="text"
+      id="productImage"
+      placeholder="Image URL or image file"
+    >
+
+    <textarea
+      id="productDescription"
+      placeholder="Product Description"
+    ></textarea>
+
+    <select id="productCategory">
+
+      <option value="brand-new">
+        Brand New
+      </option>
+
+      <option value="second-hand">
+        Second Hand
+      </option>
+
+    </select>
+
+    <button
+      class="save-btn"
+      onclick="saveProduct()"
+    >
+      Save Product
+    </button>
+
+  </div>
+
+  <!-- PRODUCTS -->
+  <div
+    class="products-container"
+    id="productsContainer"
+  ></div>
+
+</section>
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+<script>
+
+/* =========================
+   PRODUCTS ARRAY
+========================= */
+
+let products = JSON.parse(
+  localStorage.getItem("jrProducts")
+) || [
+
+  {
+    name:"Refrigerator",
+    image:"LG.jpg",
+    description:"Spacious refrigerator with advanced cooling technology.",
+    category:"brand-new"
+  },
+
+  {
+    name:"Window Type Airconditioner",
+    image:"https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop",
+    description:"Affordable second hand unit fully tested.",
+    category:"second-hand"
+  }
+
+];
+
+/* =========================
+   ADMIN MODE
+========================= */
+
+let isProductAdmin = false;
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+
+  const container =
+    document.getElementById("productsContainer");
+
+  container.innerHTML = "";
+
+  products.forEach((product, index) => {
+
+    container.innerHTML += `
+
+      <div class="product-card ${product.category}">
+
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+        >
+
+        <div class="product-content">
+
+          <span class="product-badge ${
+            product.category === "brand-new"
+            ? "new"
+            : "second"
+          }">
+
+            ${
+              product.category === "brand-new"
+              ? "Brand New"
+              : "Second Hand"
+            }
+
+          </span>
+
+          <h3>${product.name}</h3>
+
+          <p>${product.description}</p>
+
+          ${
+            isProductAdmin
+            ?
+
+            `
+            <div class="product-buttons">
+
+              <button
+                class="edit-btn"
+                onclick="editProduct(${index})"
+              >
+                Edit
+              </button>
+
+              <button
+                class="delete-btn"
+                onclick="deleteProduct(${index})"
+              >
+                Delete
+              </button>
+
+            </div>
+            `
+            :
+
+            ""
+          }
+
+        </div>
+
+      </div>
+
+    `;
+
+  });
+
+}
+
+/* =========================
+   SAVE PRODUCT
+========================= */
+
+function saveProduct(){
+
+  const name =
+    document.getElementById("productName").value;
+
+  const image =
+    document.getElementById("productImage").value;
+
+  const description =
+    document.getElementById("productDescription").value;
+
+  const category =
+    document.getElementById("productCategory").value;
+
+  products.push({
+
+    name,
+    image,
+    description,
+    category
+
+  });
+
+  localStorage.setItem(
+    "jrProducts",
+    JSON.stringify(products)
+  );
+
+  renderProducts();
+
+  alert("Product Added!");
+
+}
+
+/* =========================
+   DELETE PRODUCT
+========================= */
+
+function deleteProduct(index){
+
+  const confirmDelete =
+    confirm("Delete this product?");
+
+  if(confirmDelete){
+
+    products.splice(index, 1);
+
+    localStorage.setItem(
+      "jrProducts",
+      JSON.stringify(products)
+    );
+
+    renderProducts();
+
+  }
+
+}
+
+/* =========================
+   EDIT PRODUCT
+========================= */
+
+function editProduct(index){
+
+  const product = products[index];
+
+  const newName =
+    prompt(
+      "Edit Product Name:",
+      product.name
+    );
+
+  const newImage =
+    prompt(
+      "Edit Product Image URL:",
+      product.image
+    );
+
+  const newDescription =
+    prompt(
+      "Edit Description:",
+      product.description
+    );
+
+  if(
+
+    newName &&
+    newImage &&
+    newDescription
+
+  ){
+
+    products[index].name =
+      newName;
+
+    products[index].image =
+      newImage;
+
+    products[index].description =
+      newDescription;
+
+    localStorage.setItem(
+      "jrProducts",
+      JSON.stringify(products)
+    );
+
+    renderProducts();
+
+    alert("Product Updated!");
+
+  }
+
+}
+
+/* =========================
+   FILTER PRODUCTS
+========================= */
+
+function filterProducts(category, event){
+
+  const cards =
+    document.querySelectorAll(".product-card");
+
+  const buttons =
+    document.querySelectorAll(".filter-btn");
+
+  buttons.forEach(btn => {
+
+    btn.classList.remove("active");
+
+  });
+
+  event.target.classList.add("active");
+
+  cards.forEach(card => {
+
+    if(
+      category === "all" ||
+      card.classList.contains(category)
+    ){
+
+      card.style.display = "block";
+
+    }
+
+    else{
+
+      card.style.display = "none";
+
+    }
+
+  });
+
+}
+
+/* =========================
+   ADMIN SHORTCUTS
+========================= */
+
+document.addEventListener(
+  "keydown",
+  function(e){
+
+    /* LOGIN */
+    if(
+
+      e.ctrlKey &&
+      e.shiftKey &&
+      e.key.toLowerCase() === "m"
+
+    ){
+
+      const username =
+        prompt("Admin Username:");
+
+      const password =
+        prompt("Admin Password:");
+
+      if(
+
+        username === "admin" &&
+        password === "admin123"
+
+      ){
+
+        isProductAdmin = true;
+
+        document.getElementById(
+          "adminProductForm"
+        ).style.display = "block";
+
+        renderProducts();
+
+        alert("Admin Mode Activated");
+
+      }
+
+      else{
+
+        alert("Wrong Admin Login");
+
+      }
+
+    }
+
+    /* USER MODE */
+    if(
+
+      e.ctrlKey &&
+      e.shiftKey &&
+      e.key.toLowerCase() === "p"
+
+    ){
+
+      isProductAdmin = false;
+
+      document.getElementById(
+        "adminProductForm"
+      ).style.display = "none";
+
+      renderProducts();
+
+      alert("User Mode Activated");
+
+    }
+
+  }
+
+);
+
+/* =========================
+   LOAD PRODUCTS
+========================= */
+
+renderProducts();
+
+</script>
+
+ <!-- CUSTOMER REVIEWS -->
+<section id="reviews">
+
+  <div class="reviews-container">
+
+    <!-- TITLE -->
+    <div class="reviews-header">
+      <h2>Customer Reviews</h2>
+
+      <p>
+        Honest feedback from our valued customers
+      </p>
+    </div>
+
+    <!-- REVIEW LIST -->
+    <div class="review-grid" id="reviewList"></div>
+
+    <!-- REVIEW FORM -->
+    <div class="review-form-container">
+
+      <h3>Add Your Review</h3>
+
+      <form id="reviewForm">
+
+        <input
+          type="text"
+          id="reviewName"
+          placeholder="Your Name"
+          required
+        >
+
+        <select id="reviewStars" required>
+
+          <option value="">Select Rating</option>
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★☆">★★★★☆</option>
+          <option value="★★★☆☆">★★★☆☆</option>
+          <option value="★★☆☆☆">★★☆☆☆</option>
+          <option value="★☆☆☆☆">★☆☆☆☆</option>
+
+        </select>
+
+        <textarea
+          id="reviewMessage"
+          rows="5"
+          placeholder="Write your review..."
+          required
+        ></textarea>
+
+        <button type="submit">
+          Submit Review
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- HIDDEN ADMIN BUTTON -->
+<button id="adminAccessBtn" style="display:none;">
+  Admin Panel
+</button>
+
+<script>
+
+// KEYBOARD SHORTCUTS
+document.addEventListener("keydown", function(e){
+
+  // ADMIN LOGIN
+  // CTRL + SHIFT + A
+  if(
+    e.ctrlKey &&
+    e.shiftKey &&
+    e.key.toLowerCase() === "a"
+  ){
+
+    adminLogin();
+
+  }
+
+  // ADMIN LOGOUT
+  // CTRL + SHIFT + S
+  if(
+    e.ctrlKey &&
+    e.shiftKey &&
+    e.key.toLowerCase() === "s"
+  ){
+
+    adminLogout();
+
+  }
+
+});
+
+// ADMIN LOGOUT
+function adminLogout(){
+
+  isAdmin = false;
+
+  sessionStorage.removeItem("isAdmin");
+
+  loadReviews();
+
+  alert("Returned to user mode.");
+
+}
+
+</script>
+
+<!-- JAVASCRIPT -->
+<script>
+
+  const reviewForm =
+    document.getElementById("reviewForm");
+
+  const reviewList =
+    document.getElementById("reviewList");
+
+  // ADMIN SETTINGS
+  const adminUsername = "admin";
+  const adminPassword = "admin123";
+
+  // CHANGE TO true IF ADMIN LOGGED IN
+  let isAdmin = false;
+
+  // LOAD REVIEWS
+  window.onload = function () {
+
+    loadReviews();
+
+  };
+
+  // SUBMIT REVIEW
+  reviewForm.addEventListener("submit", function (e) {
+
+    e.preventDefault();
+
+    const name =
+      document.getElementById("reviewName").value;
+
+    const stars =
+      document.getElementById("reviewStars").value;
+
+    const message =
+      document.getElementById("reviewMessage").value;
+
+    const reviews =
+      JSON.parse(localStorage.getItem("jrReviews")) || [];
+
+    // ADD REVIEW
+    reviews.push({
+      name,
+      stars,
+      message
+    });
+
+    // SAVE
+    localStorage.setItem(
+      "jrReviews",
+      JSON.stringify(reviews)
+    );
+
+    // RELOAD
+    loadReviews();
+
+    // RESET FORM
+    reviewForm.reset();
+
+  });
+
+  // LOAD REVIEWS
+  function loadReviews() {
+
+    reviewList.innerHTML = "";
+
+    const savedReviews =
+      JSON.parse(localStorage.getItem("jrReviews")) || [];
+
+    savedReviews.forEach((review, index) => {
+
+      createReviewCard(review, index);
+
+    });
+
+  }
+
+  // CREATE REVIEW CARD
+  function createReviewCard(review, index) {
+
+    const reviewCard =
+      document.createElement("div");
+
+    reviewCard.classList.add("review-card");
+
+    reviewCard.innerHTML = `
+
+      <h3>${review.name}</h3>
+
+      <div class="stars">
+        ${review.stars}
+      </div>
+
+      <p>${review.message}</p>
+
+      ${isAdmin ? `
+        <div class="review-buttons">
+
+          <button class="delete-btn"
+            onclick="deleteReview(${index})">
+            Delete
+          </button>
+
+        </div>
+      ` : ""}
+
+    `;
+
+    reviewList.prepend(reviewCard);
+
+  }
+
+  // ADMIN LOGIN
+  function adminLogin() {
+
+    const username =
+      prompt("Admin Username:");
+
+    const password =
+      prompt("Admin Password:");
+
+    if (
+      username === adminUsername &&
+      password === adminPassword
+    ) {
+
+      isAdmin = true;
+
+      loadReviews();
+
+      alert("Admin mode enabled.");
+
+    } else {
+
+      alert("Invalid admin credentials.");
+
+    }
+
+  }
+
+  // DELETE REVIEW
+  function deleteReview(index) {
+
+    const confirmDelete =
+      confirm("Are you sure you want to delete this review?");
+
+    if (confirmDelete) {
+
+      const reviews =
+        JSON.parse(localStorage.getItem("jrReviews")) || [];
+
+      reviews.splice(index, 1);
+
+      localStorage.setItem(
+        "jrReviews",
+        JSON.stringify(reviews)
+      );
+
+      loadReviews();
+
+      alert("Review deleted successfully.");
+
+    }
+
+  }
+
+</script>
+
+<!-- CONTACT -->
+<section id="contact">
+
+  <!-- SECTION TITLE -->
+  <div class="section-title">
+
+    <h2>Contact Us</h2>
+
+    <p>
+      Send us a message for inquiries,
+      repairs, installation, and maintenance services.
+    </p>
+
+  </div>
+
+  <div class="contact-container">
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+
+      <!-- OWNER PROFILE -->
+      <div class="owner-profile">
+
+        <!-- IMAGE -->
+        <div class="owner-image">
+          <img src="abou.jpg" alt="Owner Image">
+        </div>
+
+        <!-- DETAILS -->
+        <div class="owner-details">
+
+          <h3>
+            Jr Refrigeration and
+            Airconditioning Services
+          </h3>
+
+          <p>
+            📍 Sea Side Lapaz 1, Lapasan,
+            Cagayan de Oro City,
+            9000 Misamis Oriental
+          </p>
+
+          <p>
+            📞 0975 483 9500
+          </p>
+
+          <p>
+            ✉️ jrservices581@gmail.com
+          </p>
+
+          <p>
+            🌐
+            <a
+              href="https://www.facebook.com/jennrementizo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Facebook Page
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CONTACT FORM -->
+    <form
+      class="contact-form"
+      action="https://formspree.io/f/xredlglo"
+      method="POST"
+    >
+
+      <h3>Send Message</h3>
+
+      <!-- FULL NAME -->
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Full Name"
+        required
+      >
+
+      <!-- EMAIL -->
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email Address"
+        required
+      >
+
+      <!-- SUBJECT -->
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        required
+      >
+
+      <!-- MESSAGE -->
+      <textarea
+        name="message"
+        rows="6"
+        placeholder="Write your message here..."
+        required
+      ></textarea>
+
+      <!-- ANTI-SPAM -->
+      <input
+        type="text"
+        name="_gotcha"
+        style="display:none"
+      >
+
+      <!-- SUBMIT BUTTON -->
+      <button type="submit">
+        Send Message
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <!-- LEFT -->
+  <div class="footer-left">
+
+    <h3>
+      Jr Refrigeration and
+      Airconditioning Services
+    </h3>
+
+    <p>
+      Trusted cooling and refrigeration
+      solutions in Cagayan de Oro City.
+    </p>
+
+  </div>
+<!-- RIGHT -->
+<div class="footer-right">
+
+  <a href="#home">Home</a>
+
+  <a href="#about">About</a>
+
+  <a href="#services">Services</a>
+
+  <a href="#products">Products</a>
+
+  <a href="#contact">Contact</a>
+
+  <!-- PHONE -->
+  <a href="tel:09273058643">
+    📞 (0975) 4839 500
+  </a>
+
+  <!-- FACEBOOK -->
+  <a
+    href="https://www.facebook.com/jennrementizo"
+    target="_blank"
+  >
+    Facebook
+  </a>
+
+  <!-- GMAIL -->
+  <a
+    href="mailto:jrservices581@gmail.com"
+  >
+    Gmail
+  </a>
+
+</div>
+
+</footer>
+
+</body>
+</html>
